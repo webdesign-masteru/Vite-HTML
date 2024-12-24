@@ -1,6 +1,6 @@
 <h1>Vite HTML</h1>
 
-<p>Lightweight Vite startup template (traditional multi-page)</p>
+<p>Lightweight Vite startup template for a traditional multi-page websites.</p>
 
 <p>
 	<img src="https://raw.githubusercontent.com/agragregra/vite-html/master/src/assets/img/example/preview.jpg" alt="Start HTML Template">
