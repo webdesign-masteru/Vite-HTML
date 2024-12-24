@@ -10,7 +10,7 @@
 
 <p>Clone into the current folder with remove all unnecessary (one command):</p>
 
-<pre>git clone https://github.com/agragregra/vite-html .; rm -rf trunk .gitignore .git readme.md</pre>
+<pre>git clone https://github.com/agragregra/vh .; rm -rf trunk .gitignore .git readme.md</pre>
 
 <ol>
 	<li>Clone or <a href="https://github.com/agragregra/vite-html/archive/master.zip">Download</a> <strong>Vite HTML</strong> from GitHub</li>
