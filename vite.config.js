@@ -1,4 +1,4 @@
-import SGI from 'vite-plugin-sass-glob-import';
+import SassGlob from 'vite-plugin-sass-glob-import';
 import { defineConfig } from 'vite'
 import { sync } from 'glob'
 
@@ -12,8 +12,8 @@ const noAttr = () => {
 
 export default defineConfig({
 	plugins: [
+		SassGlob(),
 		noAttr(),
-		SGI(),
 	],
 	build: {
 		rollupOptions: {
