@@ -17,3 +17,5 @@
 	<li>Install мodules: <strong>npm i</strong></li>
 	<li>Run: <strong>npm run dev</strong></li>
 </ol>
+
+<blockquote>Important rule! Do not delete the second.html file until a new second file of the multi-page site is created.</blockquote>

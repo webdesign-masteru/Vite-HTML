@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { sync } from 'glob'
 
 const noAttr = () => {
 	return {
@@ -14,10 +15,7 @@ export default defineConfig({
 	],
 	build: {
 		rollupOptions: {
-			input: {
-				index: 'src/index.html',
-				second: 'src/second.html', // Do not remove!
-			},
+			input: sync('src/**/*.html'.replace(/\\/g, '/')),
 			output: {
 				assetFileNames: (assetInfo) => {
 					let extType = assetInfo.name
@@ -28,10 +26,10 @@ export default defineConfig({
 				entryFileNames: 'assets/js/[name].js',
 			},
 		},
-		outDir: '../dist/',
+		outDir: '../dist',
 		emptyOutDir: true,
 		assetsInlineLimit: 0,
 	},
+	root: 'src',
 	base: '',
-	root: './src',
 })
