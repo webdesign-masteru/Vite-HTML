@@ -1,3 +1,4 @@
 // Custom Scripts
 
-// document.body.style.display = 'none'
+// document.body.hidden = true
+
