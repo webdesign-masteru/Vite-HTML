@@ -3,11 +3,11 @@
 @use '../config' as *;
 
 .accent {
-	color: $accent;
+  color: $accent;
 }
 
 .container {
-	max-width: 870px;
-	margin: auto;
-	padding: math.div($gutter, 1.5);
+  max-width: 870px;
+  margin: auto;
+  padding: math.div($gutter, 1.5);
 }

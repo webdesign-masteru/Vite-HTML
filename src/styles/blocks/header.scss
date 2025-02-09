@@ -3,9 +3,9 @@
 @use '../config' as *;
 
 .header-img {
-	border-radius: $radius;
-	@include media-breakpoint-down(sm) {
-		height: 32vh;
-		object-fit: cover;
-	}
+  border-radius: $radius;
+  @include media-breakpoint-down(sm) {
+    height: 32vh;
+    object-fit: cover;
+  }
 }

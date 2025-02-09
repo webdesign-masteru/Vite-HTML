@@ -14,12 +14,12 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 // FONTS LOAD SECTION
 
 @mixin font($fname, $fstyle, $fweight, $furl) {
-	@font-face {
-		font-family: $fname;
-		font-style: $fstyle;
-		font-weight: $fweight;
-		src: url($furl) format('woff2');
-	}
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format('woff2');
+  }
 }
 
 @include font('roboto-x', normal, 400, '../assets/fonts/roboto-regular-webfont.woff2');
@@ -32,28 +32,28 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 // Breakpoints Mixin
 
 $grid-breakpoints: (
-	xs: 0,
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px,
-	xxl: 1400px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
 );
 
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-	$min: map.get($breakpoints, $name); @return if($min != 0, $min, null);
+  $min: map.get($breakpoints, $name); @return if($min != 0, $min, null);
 }
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
-	$max: map.get($breakpoints, $name); @return if($max and $max > 0, $max - .02, null);
+  $max: map.get($breakpoints, $name); @return if($max and $max > 0, $max - .02, null);
 }
 
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-	$min: breakpoint-min($name, $breakpoints);
-	@if $min { @media (min-width: $min) { @content; } } @else { @content; }
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min { @media (min-width: $min) { @content; } } @else { @content; }
 }
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
-	$max: breakpoint-max($name, $breakpoints);
-	@if $max { @media (max-width: $max) { @content; } } @else { @content; }
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max { @media (max-width: $max) { @content; } } @else { @content; }
 }
 
 // Custom Mixin
@@ -63,46 +63,46 @@ $grid-breakpoints: (
 // RESET STYLES SECTION
 
 body {
-	font-family: $userfont;
-	font-size: $fontsize;
-	line-height: $lineheight;
-	color: $textcolor;
-	min-width: 320px;
-	position: relative;
-	overflow-x: hidden;
+  font-family: $userfont;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  color: $textcolor;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
 }
 
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ::placeholder {
-	color: #666;
+  color: #666;
 }
 
 ::selection {
-	background-color: $accent;
-	color: #fff;
+  background-color: $accent;
+  color: #fff;
 }
 
 button, input, select, textarea {
-	line-height: inherit;
-	outline: none;
+  line-height: inherit;
+  outline: none;
 }
 
 input, textarea {
-	&:focus:required:invalid {
-		border-color: red;
-	}
-	&:required:valid {
-		border-color: green;
-	}
+  &:focus:required:invalid {
+    border-color: red;
+  }
+  &:required:valid {
+    border-color: green;
+  }
 }
 
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-	cursor: pointer;
+  cursor: pointer;
 }
